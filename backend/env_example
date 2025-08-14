@@ -1,0 +1,6 @@
+NODE_ENV=development
+HOST=0.0.0.0
+PORT=3333
+APP_KEY=umasenhadificil12345678
+LOG_LEVEL=info
+
