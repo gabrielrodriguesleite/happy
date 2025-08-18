@@ -7,26 +7,31 @@ services:
       - POSTGRES_PASSWORD=astrongpassword
       - POSTGRES_DB=adonis
     volumes:
-      - postgres_data:/var/lib/postgresql/data 
+      - postgres_data:/var/lib/postgresql/data
 
   backend:
     image: backend_image
     container_name: backend_container
     build:
-      context: ./backend  
+      context: ./backend
     ports:
       - "3333:3333"
     environment:
-      - DB_CONNECTION=pg 
+      - DB_CONNECTION=pg
       - DB_HOST=postgres
       - DBPORT=5432
       - DB_USER=postgres
       - DB_PASWORD=astrongpassword
+      - NODE_ENV=development
       - HOST=0.0.0.0
+      - PORT=3333
+      - APP_KEY=umasenhadificil12345678
+      - LOG_LEVEL=info
     depends_on:
       - postgres
     volumes:
       - ./backend:/app
+      - /app/node_modules # necessário para que a pasta node_modules da imagem persista (quando não existe no host)
 
   frontend:
     image: frontend
@@ -39,6 +44,7 @@ services:
       - backend
     volumes:
       - ./frontend:/app
+      - /app/node_modules # necessário para que a pasta node_modules da imagem persista (quando não existe no host)
 
 volumes:
   postgres_data:
