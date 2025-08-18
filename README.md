@@ -8,7 +8,7 @@ Melhore e depois arruine o humor de uma SPA utilizando a API de piadas [geek](ht
 4. O primeiro clique na tela deve alterar a rota para [/triste](http://localhost:3000/triste), e por consequência torná-la 100% triste :(
 5. Um clique na tela triste deve alterar a rota para [/poker-face](http://localhost:3000/poker-face) e chamar uma piada randômica do backend, para ser apresentada em uma modal.
 6. A tela deverá progressivamente melhorar o seu humor enquanto lemos a piada (ou mais de uma) para ela :)
-7. A modal com a piada só poderá ser fechada após a tela estar 100% feliz com a sua vida novamente, e a rota para isso deverá ser **/feliz**.
+7. A modal com a piada só poderá ser fechada após a tela estar 100% feliz com a sua vida novamente, e a rota para isso deverá ser [/feliz](http://localhost:3000/feliz).
 8. Fechada a modal, a SPA volta a sua indecisão [/inicial](http://localhost:3000/inicial) sobre o seu humor, sua vida, o universo e tudo mais :|
 
 ## Clonar o projeto do github
